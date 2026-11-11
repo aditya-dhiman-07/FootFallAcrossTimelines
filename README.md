@@ -7,7 +7,6 @@
 [![CatBoost](https://img.shields.io/badge/CatBoost-1.2%2B-yellow.svg)](https://catboost.ai/)
 [![SciPy Optimization](https://img.shields.io/badge/SciPy-SLSQP%20Optimizer-orange.svg)](https://scipy.org/)
 [![Validation](https://img.shields.io/badge/Validation-Rolling--Origin%20CV-purple.svg)]()
-[![Zero-Hardcoding](https://img.shields.io/badge/Architecture-Zero%20Hardcoding-success.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
