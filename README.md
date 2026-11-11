@@ -1,7 +1,10 @@
 # 🎬 Footfall Across Timelines: Direct Multi-Horizon Demand Forecasting
 > **Production-Grade Time-Series Architecture for 53-Day Multi-Horizon Theater Audience Forecasting**  
+> *Developed for the **CodeSangam** Competition under the **Logical Rhythm** subdivision.*  
 > *A leak-free, mathematically aligned, and runtime-adaptive solution designed for real-world entertainment venue demand planning.*
 
+[![Competition: CodeSangam](https://img.shields.io/badge/Competition-CodeSangam-orange.svg)]()
+[![Subdivision: Logical Rhythm](https://img.shields.io/badge/Subdivision-Logical%20Rhythm-blueviolet.svg)]()
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![LightGBM](https://img.shields.io/badge/LightGBM-4.0%2B-brightgreen.svg)](https://lightgbm.readthedocs.io/)
 [![CatBoost](https://img.shields.io/badge/CatBoost-1.2%2B-yellow.svg)](https://catboost.ai/)
@@ -12,6 +15,8 @@
 ---
 
 ## 📌 Problem Overview & Business Context
+
+This solution was developed for the **"Footfall Across Timelines"** challenge, featured in the **Logical Rhythm** subdivision of the **CodeSangam** competitive symposium.
 
 Forecasting venue attendance over extended forward timelines is one of the most challenging problems in entertainment, retail, and hospitality management. Unlike short-term next-day forecasting where autoregressive momentum dominates, predicting attendance across a multi-week horizon must reckon with:
 
