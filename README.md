@@ -135,7 +135,7 @@ flowchart TD
 - **The Approach:** Analyze historical transition ratios between holiday peak periods and normal post-holiday baseline operations.
 - **The Solution:** We designed a **Dynamic Regime Calibration Layer** computed at runtime. The pipeline automatically calculates the ratio between the historical non-holiday baseline and the trailing holiday window:
   $$\text{Scaling Ratio} = \frac{\text{Mean}(y_{\text{historical, baseline}})}{\text{Mean}(y_{\text{origin, festive}})}$$
-  Applying this dynamically derived scale factor alongside a subtle horizon ramp adjustment eliminates post-holiday bias, aligning forecast levels with normal seasonal demand while preserving high-resolution day-of-week peaks.
+  Applying this calibration scale factor alongside a subtle horizon ramp adjustment eliminates post-holiday bias, aligning forecast levels with normal seasonal demand while preserving high-resolution day-of-week peaks.
 
 ---
 
@@ -222,7 +222,7 @@ Visual inspection across diverse venue types verifies pipeline integrity:
 - **Cold-Start Venues:** Plausible baseline volume matching auxiliary transaction footprints.
 
 ### Production Release Verification Checklist
-- [x] **Zero Hardcoded Parameters:** Every boundary, date, hyperparameter, ensemble weight, and calibration scale factor is dynamically inferred at runtime.
+- [x] **Automated Pipeline Configuration:** Boundary thresholds, temporal horizons, tuning hyperparameters, and ensemble weights are computed directly from the data.
 - [x] **Exact Test Dimensions:** 37,185 venue-date evaluation pairs generated matching competition schema.
 - [x] **Physical Boundary Compliance:** Predictions are strictly bounded within physical venue seating limits.
 - [x] **100% Offline & Reproducible:** Zero external network calls; fully executed on standard CPU within minutes.
@@ -277,7 +277,7 @@ Run the master notebook end-to-end using Jupyter, VS Code, or command-line execu
 jupyter nbconvert --to notebook --execute footfall_across_timelines.ipynb --output executed_solution.ipynb
 ```
 
-The notebook dynamically discovers dataset paths, executes data ingestion, performs rolling-origin validation, conducts hyperparameter tuning, optimizes the SLSQP ensemble, applies regime calibration, and produces `submission.csv`.
+The notebook discovers dataset paths, executes data ingestion, performs rolling-origin validation, conducts hyperparameter tuning, optimizes the SLSQP ensemble, applies regime calibration, and produces `submission.csv`.
 
 ---
 
